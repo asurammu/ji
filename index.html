@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Valentine's Day, My Love!</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #f6d365);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #4d0000;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1, h2 {
+      font-family: 'Pacifico', cursive;
+      color: #ff4d4d;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+      color: #ff4d4d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.8);
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Homepage */
+    #home {
+      background: url('photo1.jpg') no-repeat center center/cover; /* Replace with your photo */
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #home h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    #home p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    #home button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    #home button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Quiz */
+    #quiz {
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    #quiz button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      margin: 5px;
+    }
+
+    #quiz button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Countdown */
+    #countdown {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff4d4d;
+    }
+
+    /* Contact Form */
+    #contact input, #contact textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ff4d4d;
+      border-radius: 15px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1rem;
+    }
+
+    #contact button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    #contact button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Floating Hearts Animation */
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hearts span {
+      position: absolute;
+      color: #ff4d4d;
+      font-size: 20px;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(-10%); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Floating Hearts -->
+  <div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💓</span>
+    <span>💗</span>
+  </div>
+
+  <!-- Homepage -->
+  <section id="home">
+    <h1>Happy Valentine's Day, My Love!</h1>
+    <p>You mean the world to me. Let me show you why.</p>
+    <button onclick="scrollToSection('about')">Explore Our Love Story</button>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>Our Love Story</h2>
+    <p>We met on a beautiful day, and since then, my life has been filled with joy and love. Here's our journey together:</p>
+    <ul>
+      <li>First Date: 4th May 2024</li>
+      <li>First Trip: Our journey is an intimate escape filled with shared glances, whispered conversations, and the magic of movement. As the bus glides through winding roads, the soft hum of the engine blends with the rhythmic swaying, creating a soothing atmosphere.
+
+You and your partner sit by the window, your shoulders brushing, fingers entwined. The world outside transforms into a cinematic backdrop—rolling hills bathed in golden sunset hues, city lights twinkling like stars, or raindrops tracing delicate patterns on the glass.
+
+Time slows down as you share laughter, secret dreams, and perhaps a pair of earphones, listening to a song that suddenly becomes your song. A gentle breeze filters in through the open window, carrying the scent of pine, rain, or the salty ocean.
+
+Maybe you steal a quiet moment, resting your head on their shoulder, feeling the warmth of their presence. Maybe you exchange a knowing smile, lost in each other’s eyes, as the journey stretches ahead—an adventure, a memory, a promise of more journeys to come</li>
+      
+    </ul>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Our Memories</h2>
+    <div class="gallery">
+      <img src="photo5.jpg" alt="Photo 1"> <!-- Replace with your photo -->
+      <img src="photo2.jpg" alt="Photo 2"> <!-- Replace with your photo -->
+      <img src="photo3.jpg" alt="Photo 3"> <!-- Replace with your photo -->
+      <img src="photo4.jpg" alt="Photo 4"> <!-- Replace with your photo -->
+    </div>
+  </section>
+
+  <!-- Messages -->
+  <section id="messages">
+    <h2>To My Forever Valentine</h2>
+    <p>Dear Ammu(19-18-9-12-1-20-8-1),</p>
+    <p>My love, every moment with you is a gift that I cherish deeply. Your laughter brightens my days, and your love makes my world complete. No matter what life brings, I promise to stand by your side, making beautiful memories together. You are my greatest joy, my heart’s melody, and my forever. In you, I have found a love that transcends time—a bond that no distance, challenge, or fate can ever break. ❤</p>
+  </section>
+
+  <!-- Quiz -->
+  <section id="quiz">
+    <h2>How Well Do You Know Me?</h2>
+    <p>Question 1: What’s my favorite color?</p>
+    <button onclick="alert('Correct! You know me so well.')">Grey</button>
+    <button onclick="alert('Wrong! Try again.')">Blue</button>
+    <button onclick="alert('Wrong! Try again.')">Green</button>
+    <button onclick="alert('Wrong! Try again.')">Pink</button>
+
+    <p>Question 2: Where did we first have biryani together?</p>
+    <button onclick="alert('Wrong! Try again.')">Paradise</button>
+    <button onclick="alert('Wrong! Try again.')">Biryani Cafe</button>
+    <button onclick="alert('Correct! That was such a special day.')">Cafe Bahar</button>
+    <button onclick="alert('Wrong! Try again.')">Ghosh Biryani</button>
+
+    <p>Question 3: What color did we wear too many times together?</p>
+    <button onclick="alert('Wrong! Try again.')">Red</button>
+    <button onclick="alert('Wrong! Try again.')">Yellow</button>
+    <button onclick="alert('Correct! We looked so good in that color.')">White</button>
+    <button onclick="alert('Wrong! Try again.')">Green</button>
+  </section>
+
+  <!-- Countdown -->
+  <section id="countdown">
+    <h2>Countdown to Valentine's Day</h2>
+    <p id="timer"></p>
+  </section>
+
+  <!-- Audio -->
+  <section id="audio">
+    <h2>Our Song</h2>
+    <audio controls autoplay loop>
+      <source src="E:\New folder\Chahun Main Ya Naa - Aashiqui 2 320 Kbps.mp3" type="audio/mpeg"> <!-- Replace with your audio file -->
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Leave Me a Message</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script>
+    // Scroll to Section
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Countdown Timer
+    const valentinesDay = new Date("February 14, 2025 00:00:00").getTime();
+    const timer = document.getElementById("timer");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = valentinesDay - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+
+    // Floating Hearts Animation
+    const heartsContainer = document.querySelector('.hearts');
+    const hearts = ['❤️', '💖', '💕', '💓', '💗'];
+
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement('span');
+      heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+      heartsContainer.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
